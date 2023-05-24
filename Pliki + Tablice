@@ -1,0 +1,168 @@
+/*funkcja czyPierwsza*/
+using System.Collections;
+
+/*int czyPierwsza(int x)
+{
+    int dzielniki = 0;
+    for (int i = 0; i < x; i++)
+    {
+        if (x % i == 0)
+        {
+            dzielniki++;
+        }
+    }
+    if (dzielniki > 2)
+    {
+        Console.WriteLine("Pierwsza");
+    }
+    else
+    {
+        Console.WriteLine("Nie");
+    }
+    return ' ';
+}*/
+
+/*Lista liczb zlozonych*/
+/*int k = 0;
+int s = 0;
+int[] D = { 2, 3, 4, 5, 6, 7, 8, 9 };
+ArrayList array = new ArrayList();
+Random r = new Random();
+while (k < 25)
+{
+    s = r.Next(10, 100);
+    if (s % 2 == 0 || s % 3 == 0 || s % 5 == 0 || s % 7 == 0 || s % 9 == 0)
+    {
+        array.Add(s);
+        k++;
+    }
+}
+
+foreach (int i in array)
+{
+    Console.WriteLine(i);
+}*/
+
+
+/*Lista liczb pierwszych*/
+/*int k = 0;
+int s = 0;
+int[] D = { 2, 3, 4, 5, 6, 7, 8, 9 };
+ArrayList array = new ArrayList();
+Random r = new Random();
+while (k < 25)
+{
+    s = r.Next(10, 100);
+    if (s % 2 != 0 && s % 3 != 0 && s % 5 != 0 && s % 7 != 0 && s % 9 != 0)
+    {
+        array.Add(s);
+        k++;
+    }
+}
+
+foreach (int i in array)
+{
+    Console.WriteLine(i);
+}*/
+
+/*Zad 1 dp*/
+/*int suma = 0;
+int ilosc = 0;
+int sumaCyfr = 0;
+int[] T = new int[25];
+Random r = new Random();
+for (int i = 0; i < T.Length; i++)
+{
+    T[i] = r.Next(10, 100);
+}
+
+for (int i = 0; i < T.Length; i++)
+{
+    sumaCyfr = (T[i] % 10) + (T[i] / 10);
+    if (sumaCyfr % 2 != 0 && sumaCyfr % 3 != 0 && sumaCyfr % 5 != 0 && sumaCyfr % 7 != 0 && sumaCyfr % 9 != 0)
+    {
+        ilosc++;
+        suma += T[i];
+        Console.Write(T[i] + "+");
+    }
+}
+Console.WriteLine("=" + suma);
+Console.WriteLine(ilosc);
+
+foreach (int j in T)
+{
+    Console.Write(j + " ");
+}*/
+
+/*zad2 dp*/
+/*int k = 0;
+int s = 0;
+ArrayList array = new ArrayList();
+Random r = new Random();
+while (k < 15)
+{
+    s = r.Next(100, 1000);
+    if (s % 13 == 0)
+    {
+        array.Add(s);
+        k++;
+        Console.Write(s + " ");
+    }
+}
+Console.WriteLine(" ");
+foreach (int j in array)
+{
+    Console.Write(j +  " ");
+}*/
+
+
+/*Zad 3 dp*/
+/*int ilosc = 0;
+int suma = 0;
+int n = 5;
+int m = 5;
+int[,] G = new int[n, m];
+Random r = new Random();
+for (int i = 0; i < G.GetLength(0); i++)
+{
+    for (int j = 0; j < G.GetLength(1); j++)
+    {
+        G[i, j] = r.Next(1, 10);
+        Console.Write(G[i, j] + "\t");
+    }
+    Console.WriteLine();
+}
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine();
+*/
+
+/*Tworzenie pliku*/
+/*StreamWriter sw = new StreamWriter(@"C:\py\poligon.txt");
+for (int i = 0; i < 10; i++)
+{
+    sw.WriteLine(i);
+}
+sw.Flush();
+sw.Close();*/
+
+
+/*3.2 Zapisz do pliku 10 losowych liczb dwucyfrowych. Odczytaj ten plik i wypisz największą z liczb*/
+/*Random r = new Random();
+StreamWriter sw = new StreamWriter(@"C:\py\tren.txt");
+for (int i = 0; i < 11; i++)
+{
+    sw.WriteLine(r.Next(10, 100));
+}
+
+sw.Flush();
+sw.Close();
+
+string[] lines = System.IO.File.ReadAllLines(@"C:\py\tren.txt");
+int[] T = new int[10];
+for (int i = 0; i < 10; i++)
+{
+    T[i] = int.Parse(lines[i]);
+}
+Console.WriteLine(T.Max());*/
+
