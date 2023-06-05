@@ -1,0 +1,355 @@
+/*Stwórz tablice 40 losowych liczb pierwszych z zakresu 100 - 1000*/
+/*int[] Tab = new int[40];
+Random r = new Random();
+for (int i = 0; i < Tab.Length;)
+{
+    int dzielniki = 0;
+    Tab[i] = r.Next(100, 1000);
+    for (int j = 1; j <= Tab[i]; j++)
+    {
+        if (Tab[i] % j == 0)
+        {
+            dzielniki += 1;
+        }
+    }
+    if (dzielniki == 2)
+    {
+        i++;
+    }
+}
+
+foreach (int s in Tab)
+{
+    Console.Write(s + "  ");
+}*/
+
+/*int suma = 0;
+int ilosc = 0;
+int[] S = new int[25];
+Random rnd = new Random();
+for (int i = 0; i < S.Length; i++)
+{
+    S[i] = rnd.Next(10, 100);
+}
+
+
+
+for (int j = 0; j < S.Length; j++)
+{
+    int dzielniki = 0;
+    int sumacyfr = 0;
+    sumacyfr = S[j] % 10 + S[j] / 10;
+    for (int y = 1; y <= sumacyfr; y++)
+    {
+        if (sumacyfr % y == 0)
+        {
+            dzielniki++;
+        }
+    }
+    if (dzielniki == 2)
+    {
+        suma += S[j];
+        ilosc++;
+    }
+}
+
+
+foreach (int s in S)
+{
+    Console.Write(s + " ");
+}
+
+Console.WriteLine(" ");
+Console.WriteLine(" ");
+
+Console.WriteLine(ilosc);
+
+Console.WriteLine(" ");
+Console.WriteLine(" ");
+
+Console.WriteLine(suma);*/
+
+
+/*int[] S = new int[15];
+Random r = new Random();
+int k = 0;
+for (int i = 0; i < S.Length; i++)
+{
+    S[i] = r.Next(100, 1000);
+    if (S[i] % 13 != 0)
+    {
+        i--;
+    }
+}*/
+
+
+
+/*int k = 0;
+int[] S = new int[15];
+Random r = new Random();
+while (k < 15)
+{
+    S[k] = r.Next(100, 1000);
+    if (S[k] % 13 == 0)
+    {
+        k++;
+    }
+    
+}
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+*/
+
+/*int[,] S = new int[2, 2];
+S[0, 1] = 1;
+S[1, 0] = 1;
+S[1, 1] = 1;
+S[0, 0] = 1;
+
+foreach (int i in S)
+{
+    Console.WriteLine(i);
+}
+*/
+
+/*Random r = new Random();
+int[] S = new int[15];
+for (int i = 0; i < S.Length;)
+{
+    S[i] = r.Next(10, 100);
+    if (S[i] % 2 != 0)
+    {
+        i++;
+    }
+}*/
+
+/*foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+*/
+
+
+
+/*Wygeneruj tablicę 20 dowolnych liczb dwucyfrowych i potem zaokrąglij każdą w górę do pełnej 10-tki*/
+
+/*int[] S = new int[20];
+Random r = new Random();
+for (int i = 0; i < S.Length; i++)
+{
+    S[i] = r.Next(10, 100);
+    Console.Write(S[i] + " ");
+    if (S[i] % 10 != 0)
+    {
+        S[i] = S[i] - S[i] % 10 + 10;
+    }
+}
+
+Console.WriteLine(" ");
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+*/
+
+
+
+/*Wygeneruj listę 12 losowych liczb dwucyfrowych podzielnych przez 7*/
+
+/*int[] S = new int[12];
+Random r = new Random();
+for (int i = 0; i < S.Length;)
+{
+    S[i] = r.Next(10, 100);
+    if (S[i] % 7 == 0)
+    {
+        i++;
+    }
+}
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+*/
+
+/* 4.Wygeneruj tablicę 10 losowych liczb pierwszych*/
+
+/*Random r = new Random();
+int[] S = new int[10];
+for (int i = 0; i < S.Length;)
+{
+    int dzielniki = 0;
+    S[i] = r.Next(10, 100);
+    for (int j = 1; j <= S[i]; j++)
+    {
+        if (S[i] % j == 0)
+        {
+            dzielniki++;
+        }
+    }
+    if (dzielniki == 2)
+    {
+        i++;
+    }
+}
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}*/
+
+
+/*5.Wygeneruj tablicę 40 losowych liczb trzycyfrwych i wypisz sumę na pozycjach nieparzystych 1,3,5 itd....*/
+
+/*int suma = 0;
+Random r = new Random();
+int[] S = new int[40];
+for (int i = 0; i < S.Length; i++)
+{
+    S[i] = r.Next(100, 1000);
+    if (i % 2 == 0)
+    {
+        suma += S[i];
+    }
+}
+
+Console.WriteLine(suma);*/
+
+
+/*6.Wygeneruj losową tablicę 20 elementową składającą się z cyfr 1, 2 i 3.*/
+// Znajdź najdłuższy podciąg identycznych cyfr. Jeśli jest więcej tak samo długich to wypisz ostatni z nich.
+
+/*int skond = 0;
+int dokond = 0;
+
+
+
+int maksik = 0;
+int ciomg = 0;
+Random r = new Random();
+int[] S = new int[20];
+for (int i = 0; i < S.Length; i++)
+{
+    S[i] = r.Next(1, 4);
+}
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+
+for (int i = 0; i < S.Length - 1; i++)
+{
+    if (S[i] == S[i + 1])
+    {
+        ciomg++;
+
+    }
+    else
+    {
+        if (ciomg > maksik)
+        {
+            maksik = ciomg;
+        }
+        skond = S[i] - ciomg;
+        dokond = S[i];
+        ciomg = 0;
+    }
+}
+
+Console.WriteLine(" ");
+for (int s = skond; s < dokond; s++)
+{
+    Console.WriteLine(S[s]);
+}*/
+
+
+/*int suma = 0;
+int ilosc = 0;
+int a = 0;
+int b = 0;
+int c = 0;
+
+
+int[] S = new int[30];
+Random r = new Random();
+for (int i = 0; i < S.Length; i++)
+{
+    S[i] = r.Next(100, 1000);
+    a = S[i] / 100;
+    b = (S[i] % 100) / 10;
+    c = S[i] % 10;
+    if (a == b || a == c || b == c)
+    {
+        suma += S[i];
+        ilosc++;
+    }
+}
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+Console.WriteLine();
+
+Console.WriteLine(suma);
+Console.WriteLine(ilosc);*/
+
+/*int dzielniki = 0;
+int k = 0;
+int[] S = new int[20];
+Random r = new Random();
+while (k < 20)
+{
+    S[k] = r.Next(10, 100);
+    for (int j = 1; j <= S[k]; j++)
+    {
+        if (S[k] % j == 0)
+        {
+            dzielniki++;
+        }
+    }
+    if (dzielniki > 2)
+    {
+        k++;
+        dzielniki = 0;
+    }
+}
+
+foreach (int i in S)
+{
+    Console.Write(i + " ");
+}
+*/
+
+/*Random r = new Random();
+int[,] S = new int[5, 5];
+for (int i = 0; i < S.GetLength(0); i++)
+{
+    for (int j = 0; j < S.GetLength(1); j++)
+    {
+        S[i, j] = r.Next(1, 10);
+        Console.Write(S[i, j] + "\t");
+    }
+    Console.WriteLine();
+}
+
+int suma = 0;
+int ilosc = 0;
+for (int i = 0; i < S.GetLength(0); i++)
+{
+    for (int j = 0; j < S.GetLength(1); j++)
+    {
+        if (i > 0 && i < S.GetLength(0) - 1 && j > 0 && j < S.GetLength(1) - 1)
+        {
+            suma += S[i, j];
+        }
+    }
+}
+
+Console.WriteLine(suma);*/
